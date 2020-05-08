@@ -15,6 +15,7 @@ void write_pixel (uint16_t x_value, uint16_t y_value, uint8_t color);
 void draw_v_line (uint16_t x_value, uint16_t y_value, uint16_t length);
 void draw_h_line (uint16_t x_value, uint16_t y_value, uint16_t length);
 void draw_rectangle (uint16_t x_value, uint16_t y_value, uint16_t width, uint16_t height);
+void fill_rectangle (uint16_t x_value, uint16_t y_value, uint16_t width, uint16_t height, uint8_t color);
 void clear_paper_screen (void);
 void draw_char (uint16_t x_value, uint16_t y_value, uint8_t ascii);
 void set_font (uint8_t font);

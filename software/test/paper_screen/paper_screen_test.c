@@ -19,10 +19,12 @@ TEST (paper_screen, start_here) {
 	// draw_v_line(100, 0 , 100);
 	// draw_rectangle(0, 0, 71, 71);
 	// draw_char(50, 50, 'X');
+	set_font(12);
 	uint8_t string[] = "V.1 memory display";
 	draw_string(20, 50, string);
-	// draw_h_line(0, 45 , 172);
+	draw_h_line(0, 40 , 172);
 	draw_rectangle(15, 45, 140, 20);
+	fill_rectangle(10, 10, 152, 10, COLOR_BLACK);
 	save_and_open_image();
 }
 

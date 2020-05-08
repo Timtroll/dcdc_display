@@ -99,3 +99,10 @@ void set_font (uint8_t font) {
 	}
 }
 
+void fill_rectangle (uint16_t x_value, uint16_t y_value, uint16_t width, uint16_t height, uint8_t color) {
+	for (uint16_t num_v_line = 0; num_v_line < width; num_v_line++)
+		for (uint16_t num_h_line = 0; num_h_line < height; num_h_line++){
+			write_pixel(x_value + num_v_line, y_value + num_h_line, color);
+		}
+	
+}
