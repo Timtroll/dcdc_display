@@ -6,7 +6,7 @@ all:
 	cd tdd_creator/; \
 	git submodule init; \
 	git submodule update; \
-	cd ../dcdc/; \
+	cd ../software/; \
 	}
 	make -f MakefileUnity.mk
 

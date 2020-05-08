@@ -3,7 +3,7 @@
 SILENCE = @
 
 #---- Outputs ----#
-COMPONENT_NAME = dcdc_Unity
+COMPONENT_NAME = software_Unity
 
 #--- Inputs ----#
 UNITY_HOME = ../tdd_creator/Unity

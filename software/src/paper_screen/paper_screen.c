@@ -1,5 +1,4 @@
 #include "paper_screen_internal.h"
-// #include "paper_screen.h"
 #include "fontsepd.h"
 #include <stdio.h>
 
@@ -29,8 +28,6 @@ void write_pixel (uint16_t x_value, uint16_t y_value, uint8_t color) {
 		screen_paper_memory[num_byte] &= ~(0x3 << (6 - num_pos * NUM_BIT_ON_PIX));
 	else
 		screen_paper_memory[num_byte] |= (0x3 << (6 - num_pos * NUM_BIT_ON_PIX));
-
-	// printf(" x_value %d y_value %d\n", x_value, y_value );
 }
 
 void draw_v_line (uint16_t x_value, uint16_t y_value, uint16_t length) {
@@ -101,3 +98,4 @@ void set_font (uint8_t font) {
 		default: pFont = &Font12; break;
 	}
 }
+
