@@ -1,6 +1,7 @@
 #include "unity_fixture.h"
 
 #include "paper_screen_internal.h"
+#include "paper_screen_test_helpers.h"
 
 TEST_GROUP (paper_screen);
 
