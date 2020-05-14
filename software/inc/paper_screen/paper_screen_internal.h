@@ -21,7 +21,7 @@ void clear_paper_screen (void);
 void draw_char (uint16_t x_value, uint16_t y_value, uint8_t ascii);
 void draw_string  (uint16_t x_value, uint16_t y_value, uint8_t * text);
 void set_font (uint8_t font);
-
+void display_screen (void);
 
 #endif//_PAPER_SCREEN_INTERNAL_H_
 
