@@ -4,6 +4,8 @@
 #include "paper_screen.h"
 #include <stdint.h>
 
+// #define EPD_TESTS
+
 #define COLOR_BLACK 0x00
 // #define COLOR_DARKGRAY 0x1
 // #define COLOR_LIGHTGRAY 0x2

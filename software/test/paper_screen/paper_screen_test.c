@@ -26,7 +26,7 @@ TEST (paper_screen, start_here) {
 	draw_h_line(0, 40 , 172);
 	draw_rectangle(15, 45, 140, 20);
 	fill_rectangle(10, 10, 152, 10, COLOR_BLACK);
-	save_and_open_image();
+	// save_and_open_image();
 }
 
 

@@ -7,12 +7,12 @@
 
 uint8_t screen_paper_bytes[1548] = {0};
 
-// #define PIXEL_COLOR_WHITE (num_pixel, num_cell, num_memory_cell) (((COLOR_WHITE << (6 - (num_pixel % 4) * 2)) & screen_paper_memory[num_cell * 2 + num_memory_cell]))
-// #define PIXEL_STATE(num_pixel, num_cell, num_memory_cell) ((PIXEL_COLOR_WHITE(num_pixel, num_cell, num_memory_cell) ? 0 : 1) << num_pixel)
+#define PIXEL_COLOR_WHITE(num_pixel, num_cell, num_memory_cell) (((COLOR_WHITE << (6 - (num_pixel % 4) * 2)) & screen_paper_memory[num_cell * 2 + num_memory_cell]))
+#define PIXEL_STATE(num_pixel, num_cell, num_memory_cell) ((PIXEL_COLOR_WHITE(num_pixel, num_cell, num_memory_cell) ? 0 : 1) << num_pixel)
 
 
-#define PIXEL_STATE(num_pixel, num_byte_cell, num_memory_cell) \
-	((((COLOR_WHITE << (6 - (num_pixel % 4) * 2)) & screen_paper_memory[num_byte_cell * 2 + num_memory_cell]) ? 0 : 1) << num_pixel)
+// #define PIXEL_STATE(num_pixel, num_byte_cell, num_memory_cell) \
+// 	((((COLOR_WHITE << (6 - (num_pixel % 4) * 2)) & screen_paper_memory[num_byte_cell * 2 + num_memory_cell]) ? 0 : 1) << num_pixel)
 
 
 void save_and_open_image (void) {

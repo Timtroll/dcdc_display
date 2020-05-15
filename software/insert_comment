@@ -1,0 +1,18 @@
+#!/bin/bash
+
+insert_comment_before_unity_in_file () {
+	file=$1
+
+	sed_space="\\x20"
+	comment="\/\/${sed_space}"
+	sed_line="#define${sed_space}EPD_TESTS"
+	commented_line="// #define EPD_TESTS"
+
+	if ! ( grep "${commented_line}" "${file}" -q ); then
+		# sed -i "${sed_line}/s/^/${comment}/" ${file}
+		sed -i "7 s/^/${comment}/" ${file}
+	fi
+}
+
+file=$1
+insert_comment_before_unity_in_file ${file}

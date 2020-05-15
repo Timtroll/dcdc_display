@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include "../../../hardware/Drivers/BSP/STM32L0538-Discovery/fontsepd.h"
-#include <stdio.h>
+#include "../../inc/paper_screen/fontsepd.h"
+#include "../../../hardware/Drivers/BSP/Components/Common/epd.h"
+
 
 #define MAX_X_SIZE_BYTE 9 
 #define BITS_ON_BYTE 8
@@ -113,15 +114,15 @@ void fill_rectangle (uint16_t x_value, uint16_t y_value, uint16_t width, uint16_
 	
 }
 
-#include "../../../hardware/Drivers/BSP/Components/Common/epd.h"
-extern EPD_DrvTypeDef gde021a1_drv;
+
+#ifndef EPD_TESTS
 #include "gpio.h"
+extern EPD_DrvTypeDef gde021a1_drv;
+
 #define EPD_BUSY_PIN GPIO_PIN_8
 #define EPD_BUSY_GPIO_PORT GPIOA
 
 void display_screen (void)  {
-  uint32_t index = 0;
-
   gde021a1_drv.SetDisplayWindow(0, 0, 171, 17);
 
   for(uint32_t index = 0; index < 3096; index++)
@@ -133,3 +134,10 @@ void display_screen (void)  {
   while (HAL_GPIO_ReadPin(EPD_BUSY_GPIO_PORT, EPD_BUSY_PIN) != (uint16_t)RESET);
 }
 
+#else
+
+void display_screen (void){
+
+}
+
+#endif
