@@ -29,4 +29,13 @@ TEST (paper_screen, start_here) {
 	// save_and_open_image();
 }
 
+TEST (paper_screen, draw_main_creen) {
+	draw_main_screen();
+	// save_and_open_image();
+}
+
+TEST (paper_screen, draw_menu_parametr_screen) {
+	draw_menu_parametr_screen();
+	save_and_open_image();
+}
 
